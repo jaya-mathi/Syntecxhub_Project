@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: o;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial;
+    }
+   body{
+    background-color: #f4f4f4;
+   }
+   header{
+    background: #222;
+    color: white;
+    padding: 30px;
+   }
+   nav{
+    display: flex;
+    list-style: none;
+   }
+   nav ul{
+    display: flex;
+    list-style: none;
+   }
+   nav ul li{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+   }
+   .hero{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+    color: white;
+   }
+   .hero button{
+    padding: 12px 25px;
+    border: none;
+    margin-top: 20px;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+   }
+   section{
+    padding: 50px;
+   }
+   .card{
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   }
+   form{
+    display: flex;
+    flex-direction: column;
+   }
+   input, textarea{
+    padding: 10px;
+    margin: 10px 0;
+   }
+   button{
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+   }
+   @media(min-width:500px){
+    nav{
+        flex-direction: column;
+    }
+    nav ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul li{
+        margin: 10px 0;
+    }
+    section{
+        padding-bottom: 20px;
+    }
+   }
+   @media(max-width:1366px){
+    nav{
+        flex-direction: row;
+    }
+    nav ul{
+        flex-direction: row;
+        text-align: center; 
+    }
+    nav ul li{
+        margin: 5px 0;
+        padding: 6px;
+    }
+    section{
+        padding-bottom: 20px;
+    }
+   }
+</style>
+<body>
+    <header>
+        <nav>
+            <h2>My Portfolio</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="links">Link</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <h1>Hello, I'm Jaya</h1>
+        <p>Full Stack Developer</p>
+        <button>Download Resume</button>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>B.Sc Computer Science graduate and Full Stack Developer.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Html,Css,Javascript,Java,Python,Visual Basic,C++,Oracle,React.js.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="card">
+            <h3>Google form</h3>
+            <p>Google form webpage.</p>
+        </div>
+
+        <div class="card">
+            <h3>Restaurant Website</h3>
+            <p>Responsive restaurant landing page.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <section class="link">
+        <label>Link</label>
+        <br><br>
+        <a href="#">Linked In</a>
+        <a href="#">Github</a>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

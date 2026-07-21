@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: o;
+    }
+    .main{
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to left,purple,plum);
+    }
+    h1{
+        margin: 0;
+        text-align: center;
+        justify-content: center;
+        font-size:80px;
+    }
+    form{
+        left: 40vw;
+        margin-top: 15vh;
+        font-size:xx-large;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        
+    }
+    input{
+        border: 2px solid grey;
+        width: 20vw;
+        height: 5vh;
+    }
+    button{
+        background-color: purple;
+        width: 150px;
+        height: 5vh;
+    }
+    button:hover{
+        background-color: plum;
+    }
+    @media(max-width:500px){
+        h1{
+            font-size: 10vw;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            width: 20vw;
+        }
+        ::placeholder{
+            font-size: xx-small;
+        }
+        button{
+            width: 50px;
+        }
+        label{
+            font-size: large;
+        }
+    }
+</style>
+<body>
+    <div class="main">
+        <h1>Login Form</h1>
+         <form>
+            <label for="Name">Name</label>
+            <input type="text" placeholder="Enter your name" id="Name" required>
+            <label for="Number">Number</label>
+            <input type="Number" placeholder="Enter your number" id="Number" required>
+            <label for="Email">Email</label>
+            <input type="Email" placeholder="Enter your email" id="Email" required>
+            <br>
+            <button onclick="return setValue()"><b>Login</b></button>
+        </form>
+    </div>
+</body>
+<script>
+    function setValue(){
+    let userName= document.getElementById('Name').value;
+    let userNumber=document.getElementById('Number').value;
+    let userEmail=document.getElementById('Email').value;
+
+    localStorage.setItem(userName,Name);
+    localStorage.setItem(userNumber,Number);
+    localStorage.setItem(userEmail,Email);
+    console.log("Submitted");
+    alert("Form submitted");
+    return true;
+    }
+</script>
+</html>

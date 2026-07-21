@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        background-color: rgb(255, 240, 255);
+    }
+    .main{
+        width: 50vw;
+        height: 25vh;
+        position: relative;
+        top: 1vh;
+        left: 25vw;
+        border-top: 10px solid purple;
+        border-bottom: 1px solid gray;
+        border-left: 1px solid gray ;
+        border-right: 1px solid gray  ;
+        border-radius: 10px;
+    }
+    h1{
+        font-size: xx-large;
+        margin: 2vw;
+    }
+    p{
+        font-size: larger;
+        margin: 2vw;
+    }
+    span{
+        color: red;
+        margin: 2vw;
+    }
+    .main1{
+        width: 50vw;
+        height: 30vh;
+        position: relative;
+        top: 3vh;
+        left: 25vw;
+        border-top: 1px solid gray ;
+        border-bottom: 1px solid gray;
+        border-left: 1px solid gray ;
+        border-right: 1px solid gray  ;
+        border-radius: 10px;
+    }
+    h2{
+        margin: 2vw;
+    }
+    input{
+        position: absolute;
+        width: 95.5%;
+        left: 2vw;
+        border: none;
+        border-bottom: 2px solid gray;
+        outline:none;
+    }
+    .main2{
+        width: 50vw;
+        height: 20vh;
+        position: relative;
+        top: 3vh;
+        left: 25vw;
+        border-top: 1px solid gray ;
+        border-bottom: 1px solid gray;
+        border-left: 1px solid gray ;
+        border-right: 1px solid gray  ;
+        border-radius: 10px;
+    }
+    .main3{
+        width: 50vw;
+        height: 20vh;
+        position: relative;
+        top: 3vh;
+        left: 25vw;
+        border-top: 1px solid gray ;
+        border-bottom: 1px solid gray;
+        border-left: 1px solid gray ;
+        border-right: 1px solid gray  ;
+        border-radius: 10px;
+    }
+    .main4{
+        width: 50vw;
+        height: 30vh;
+        position: relative;
+        top: 3vh;
+        left: 25vw;
+    }
+    button{
+        width: 120px;
+        height: 35px;
+        font-size: larger;
+        color: white;
+        background-color: purple;
+        border: 2px solid  purple;
+        border-radius: 5px;
+    }
+    #p1{
+        margin: 0;
+        font-size: medium;
+    }
+    #p2{
+        font-size: 15px;
+    }
+    #head{
+        text-align: center;
+        justify-content: center;
+        color: gray;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    @media(max-width:500px){
+        .main{
+            display: flex;
+            flex-direction:column;
+            width: 50%;
+        }
+        h1{
+            font-size: large;
+        }
+        p{
+            font-size: large;
+        }
+        .main1{
+            width: 50%;
+        }
+        #p3{
+            font-size: large; 
+        }
+        input{
+            width: 90%;
+        }
+        button{
+            width: 100px;
+        }
+        span{
+            font-size: small;
+        }
+    }
+</style>
+<body>
+    <div class="main">
+        <h1>Registration Form</h1>
+        <p>All ot the submissions to this form will be appended into a table as signature in the style of an open letter.</p>
+</div>
+<div class="main1">
+    <label for=""><h2>FullName</h2></label>
+    <p id="p3">Any text provided here will be used to create a digital signatire,including honorifics or degrees.</p>
+    <input type="text" id="username" placeholder="Your answer" >
+</div>
+<div class="main2">
+    <label for=""><h2>Department</h2></label>
+    <input type="text" id="userdept" placeholder="Your answer" >
+</div>
+<div class="main3">
+    <label for=""><h2>Position></h2></label>
+    <input type="text" id="userpost" placeholder="Your answer" >
+</div>
+<div class="main4">
+    <br>
+    <button onclick=" return addData()">Submit</button>
+    <br><br>
+    <p id="p1">Never submit passwords through Google Forms.</p>
+    <p id="p2">This content is neither created nor endorsed by Google. <a href="">Report Abuse</a> - <a href="">Terms of service</a> - <a href="">Privacy policy.</a></p>
+    <h1 id="head">Google Forms</h1>
+</div>
+<script>
+    function addData(){
+        let name=document.getElementById('username').value;
+        let dept=document.getElementById('userdept').value;
+        let post=document.getElementById('userpost').value;
+
+        localStorage.setItem(name,username);
+        localStorage.setItem(dept,userdept);
+        localStorage.setItem(post,userpost);
+        console.log("Submitted");
+        alert("Submitted");
+        return true;
+        
+
+    }
+</script>
+</body>
+</html>
